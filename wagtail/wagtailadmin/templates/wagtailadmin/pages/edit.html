@@ -107,10 +107,10 @@
 <span class="Resizer vertical "></span>
 <div class="Pane vertical Pane2" style="flex: 1 1 0%; position: relative; outline: none;">
     
-    <iframe id="previewframe" src="http://localhost:8000/admin/pages/6/edit/preview/" style="height: 667px; width: 375px;"></iframe>
+    <iframe id="previewframe" src="{% url 'wagtailadmin_pages:preview_on_edit' page.id %}" style="height: 667px; width: 375px;"></iframe>
     <div id="refreshbutton" value="refresh">Refresh</div>
 
-    <button class="button action-preview icon icon-view" data-action="/admin/pages/6/edit/preview/" data-auto-update="false">Preview</button>
+    <button class="button action-preview icon icon-view" data-action="{% url 'wagtailadmin_pages:preview_on_edit' page.id %}" data-auto-update="false">Preview</button>
 
     <script type="text/javascript">
         $( "#refreshbutton" ).click(function() {

@@ -26,6 +26,10 @@
         </div>
     </header>
 
+<div class="SplitPane  vertical " style="display: flex; flex: 1 1 0%; height: 100%; position: absolute; outline: none; overflow: hidden; user-select: text; flex-direction: row; left: 0px; right: 0px;">
+
+
+<div class="Pane vertical Pane1" style="flex: 0 0 auto; position: relative; outline: none; width: 50%;">
     <form id="page-edit-form" action="{% url 'wagtailadmin_pages:edit' page.id %}" method="POST" novalidate{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
         {% csrf_token %}
 
@@ -98,6 +102,11 @@
             </ul>
         </footer>
     </form>
+
+</div>
+<span class="Resizer vertical "></span>
+<div class="Pane vertical Pane2" style="flex: 1 1 0%; position: relative; outline: none;"></div>
+</div>
 
 {% endblock %}
 
